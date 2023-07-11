@@ -9,6 +9,12 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 VALID_CITIES = ['chicago', 'new york city', 'washington']
 
+VALID_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', 'all']
+
+VALID_DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
+
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -24,16 +30,20 @@ def get_filters():
     while city not in VALID_CITIES:
         city = input('invalid input. Try again: ').lower()
     
-
     # get user input for month (all, january, february, ... , june)
     month = input('what month would you like to analyze? ').lower()
+    while month not in VALID_MONTHS:
+        month = input('invalid input. Try again: ').lower()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('what day would you like to analyze? ').lower()
+    while day not in VALID_DAYS:
+        day = input('invalid input. Try again: ').lower()
 
     print('-'*40)
     
     return city, month, day
+
 
 
 def load_data(city, month, day):
