@@ -7,10 +7,9 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+
 VALID_CITIES = ['chicago', 'new york city', 'washington']
-
 VALID_MONTHS = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december', 'all']
-
 VALID_DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday', 'all']
 
 
@@ -67,7 +66,6 @@ def load_data(city, month, day):
     if month != 'all':
         months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
         month = months.index(month) + 1
-    
         df = df[df['month'] == month]
 
     if day != 'all':
@@ -117,11 +115,9 @@ def station_stats(df):
     most_common_start_station = df['Start Station'].mode()[0]
     print('most common start station: ', most_common_start_station)
 
-
     # display most commonly used end station
     most_common_end_station = df['End Station'].mode()[0]
     print('most common end station: ', most_common_end_station)
-
 
     # display most frequent combination of start station and end station trip
     most_common_start_and_end_station = (df['Start Station'] +' and '+ df['End Station']).mode()[0]
@@ -141,7 +137,6 @@ def trip_duration_stats(df):
     total_travel_time = df['Trip Duration'].sum()
     print('Total travel time: ', total_travel_time)
 
-
     # display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
     print('Mean travel time: ', mean_travel_time)
@@ -160,14 +155,11 @@ def user_stats(df):
     count_user_type = df['User Type'].value_counts()
     print('number of user types: ', count_user_type)
 
-
     # Display counts of gender
     count_gender = df['Gender'].value_counts()
     print('number of genders: ', count_gender)
 
-
     # Display earliest, most recent, and most common year of birth
-       
     earliest_birth_year = df['Birth Year'].min()
     print('earliest birth year: ', earliest_birth_year)
     
@@ -176,7 +168,6 @@ def user_stats(df):
     
     most_common_birth_year = df['Birth Year'].mode()[0]
     print('most common birth year: ', most_common_birth_year)
-
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
