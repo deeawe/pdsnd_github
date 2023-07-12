@@ -16,11 +16,11 @@ The information returned is summarized below:
 1. User statistics
 
 ### Files used
-chicago.csv
-new_york_city.csv
-washington.csv  
+* chicago.csv
+* new_york_city.csv
+* washington.csv  
 
 ### Credits
 The Udacity data science course is the basis of the project. The templates used in the code and README were provided by Udacity.
 
-The repository used in Github was forked from 'www.github.com/udacity/pdsnd_github'
+The repository used in Github was forked from www.github.com/udacity/pdsnd_github
