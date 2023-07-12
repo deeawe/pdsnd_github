@@ -7,18 +7,18 @@ The Bikeshare code was written June 14, 2023 and this README file for the projec
 Project Bikeshare
 
 ### Description
-This code allows users to explore data in the US and specifically in three cities - Chicago, Newyork City and Washington. It accepts input from users and provides them with information based on their choice of the city, the month and the day. 
+This code allows users to explore data in the US and specifically in three cities - Chicago, New york City and Washington. It accepts input from users and provides them with information based on their choice of the city, the month and the day. 
 
 The information returned is summarized below:
-1. The most frequent times of travel
-1. The most popular stations and trip
-1. The trip duration
-1. User statistics
+* The most frequent times of travel
+* The most popular stations and trip
+* The trip duration
+* User statistics
 
 ### Files used
-* chicago.csv
-* new_york_city.csv
-* washington.csv  
+1. chicago.csv
+1. new_york_city.csv
+1. washington.csv  
 
 ### Credits
 The Udacity data science course is the basis of the project. The templates used in the code and README were provided by Udacity.
